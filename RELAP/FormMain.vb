@@ -543,10 +543,19 @@ Public Class FormMain
             My.Settings.ChemSepDatabasePath = My.Application.Info.DirectoryPath & Path.DirectorySeparatorChar & "chemsepdb" & Path.DirectorySeparatorChar & "chemsep1.xml"
         Else
             Try
-                Dim cspath As String = My.Computer.Registry.LocalMachine.OpenSubKey("Software").OpenSubKey("ChemSepL").GetValue("")
-                cspath += Path.DirectorySeparatorChar + "pcd" + Path.DirectorySeparatorChar + "chemsep1.xml"
-                If File.Exists(cspath) Then
-                    My.Settings.ChemSepDatabasePath = cspath
+                Dim cspath As String = ""
+
+                If My.Computer.Registry.LocalMachine.OpenSubKey("Software").GetSubKeyNames().Contains("ChemSepL") Then ' System wide install of ChemSep
+                    cspath = My.Computer.Registry.LocalMachine.OpenSubKey("Software").OpenSubKey("ChemSepL").GetValue("")
+                ElseIf My.Computer.Registry.CurrentUser.OpenSubKey("Software").GetSubKeyNames().Contains("ChemSep") Then ' Installed only for the user without admin rights.
+                    cspath = My.Computer.Registry.CurrentUser.OpenSubKey("Software").OpenSubKey("ChemSep").OpenSubKey("CurrentUser").GetValue("")
+                End If
+
+                If Not cspath.Equals("") Then
+                    cspath += Path.DirectorySeparatorChar + "pcd" + Path.DirectorySeparatorChar + "chemsep1.xml"
+                    If File.Exists(cspath) Then
+                        My.Settings.ChemSepDatabasePath = cspath
+                    End If
                 End If
             Catch ex As Exception
                 Console.WriteLine(ex.ToString)
