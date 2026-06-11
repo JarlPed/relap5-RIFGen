@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11828.311 oobstable
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RIFGen", "RELAP\RIFGen.vbproj", "{A861C3F7-246D-4CBD-B476-AEEC9CD790E5}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DesignSurface", "GraphicsSurface\DesignSurface.vbproj", "{9912BB73-AA07-44DE-873E-54483B1B40F0}"
@@ -10,6 +12,8 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PropertyGridEx", "PropertyGridEx\PropertyGridEx\PropertyGridEx.vbproj", "{B0BB47F2-21C4-41FC-B6E6-40757ADFC4A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F1D284D3-CC4E-49F9-9E67-BF9188E4816E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RIFGen-Installer", "RIFGen-Installer\RIFGen-Installer.vdproj", "{9BF54235-2C2B-9207-4808-9580EA52FD60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,8 +97,20 @@ Global
 		{B0BB47F2-21C4-41FC-B6E6-40757ADFC4A1}.x86|Mixed Platforms.Build.0 = x86|x86
 		{B0BB47F2-21C4-41FC-B6E6-40757ADFC4A1}.x86|x86.ActiveCfg = x86|x86
 		{B0BB47F2-21C4-41FC-B6E6-40757ADFC4A1}.x86|x86.Build.0 = x86|x86
+		{9BF54235-2C2B-9207-4808-9580EA52FD60}.Debug|Any CPU.ActiveCfg = Debug
+		{9BF54235-2C2B-9207-4808-9580EA52FD60}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{9BF54235-2C2B-9207-4808-9580EA52FD60}.Debug|x86.ActiveCfg = Debug
+		{9BF54235-2C2B-9207-4808-9580EA52FD60}.Release|Any CPU.ActiveCfg = Release
+		{9BF54235-2C2B-9207-4808-9580EA52FD60}.Release|Mixed Platforms.ActiveCfg = Release
+		{9BF54235-2C2B-9207-4808-9580EA52FD60}.Release|x86.ActiveCfg = Release
+		{9BF54235-2C2B-9207-4808-9580EA52FD60}.x86|Any CPU.ActiveCfg = Debug
+		{9BF54235-2C2B-9207-4808-9580EA52FD60}.x86|Mixed Platforms.ActiveCfg = Debug
+		{9BF54235-2C2B-9207-4808-9580EA52FD60}.x86|x86.ActiveCfg = Debug
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3CB5B0D-0E40-4601-9B6E-2344207B8273}
 	EndGlobalSection
 EndGlobal
