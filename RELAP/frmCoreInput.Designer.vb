@@ -190,7 +190,6 @@ Partial Class frmCoreInput
         Me.txtAxialNodes.Location = New System.Drawing.Point(143, 21)
         Me.txtAxialNodes.Name = "txtAxialNodes"
         Me.txtAxialNodes.ShowUpDown = True
-        Me.txtAxialNodes.Size = New System.Drawing.Size(80, 20)
         Me.txtAxialNodes.TabIndex = 1
         Me.txtAxialNodes.Value = 10
         '
@@ -207,12 +206,12 @@ Partial Class frmCoreInput
         '
         Me.cboReactorEnvironment.DisplayMember = "Text"
         Me.cboReactorEnvironment.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboReactorEnvironment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboReactorEnvironment.FormattingEnabled = True
         Me.cboReactorEnvironment.ItemHeight = 14
         Me.cboReactorEnvironment.Items.AddRange(New Object() {Me.ComboItem1, Me.ComboItem2, Me.ComboItem3, Me.ComboItem4})
         Me.cboReactorEnvironment.Location = New System.Drawing.Point(143, 56)
         Me.cboReactorEnvironment.Name = "cboReactorEnvironment"
-        Me.cboReactorEnvironment.Size = New System.Drawing.Size(121, 20)
         Me.cboReactorEnvironment.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.cboReactorEnvironment.TabIndex = 2
         '
@@ -249,12 +248,12 @@ Partial Class frmCoreInput
         '
         Me.cboPowerHistoryTy.DisplayMember = "Text"
         Me.cboPowerHistoryTy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboPowerHistoryTy.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboPowerHistoryTy.FormattingEnabled = True
         Me.cboPowerHistoryTy.ItemHeight = 14
         Me.cboPowerHistoryTy.Items.AddRange(New Object() {Me.ComboItem5, Me.ComboItem6, Me.ComboItem7, Me.ComboItem8, Me.ComboItem9, Me.ComboItem10})
         Me.cboPowerHistoryTy.Location = New System.Drawing.Point(143, 87)
         Me.cboPowerHistoryTy.Name = "cboPowerHistoryTy"
-        Me.cboPowerHistoryTy.Size = New System.Drawing.Size(121, 20)
         Me.cboPowerHistoryTy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.cboPowerHistoryTy.TabIndex = 2
         '
@@ -301,11 +300,11 @@ Partial Class frmCoreInput
         '
         Me.cboOxideShatteringTrip.DisplayMember = "Text"
         Me.cboOxideShatteringTrip.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboOxideShatteringTrip.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboOxideShatteringTrip.FormattingEnabled = True
         Me.cboOxideShatteringTrip.ItemHeight = 14
         Me.cboOxideShatteringTrip.Location = New System.Drawing.Point(143, 129)
         Me.cboOxideShatteringTrip.Name = "cboOxideShatteringTrip"
-        Me.cboOxideShatteringTrip.Size = New System.Drawing.Size(121, 20)
         Me.cboOxideShatteringTrip.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.cboOxideShatteringTrip.TabIndex = 2
         '
@@ -364,8 +363,9 @@ Partial Class frmCoreInput
         '
         'cmdCopytoAll
         '
+        Me.cmdCopytoAll.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.cmdCopytoAll.Enabled = False
-        Me.cmdCopytoAll.Location = New System.Drawing.Point(343, 253)
+        Me.cmdCopytoAll.Location = New System.Drawing.Point(339, 304)
         Me.cmdCopytoAll.Name = "cmdCopytoAll"
         Me.cmdCopytoAll.Size = New System.Drawing.Size(75, 23)
         Me.cmdCopytoAll.TabIndex = 12
@@ -374,8 +374,9 @@ Partial Class frmCoreInput
         '
         'cmdCopy
         '
+        Me.cmdCopy.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.cmdCopy.Enabled = False
-        Me.cmdCopy.Location = New System.Drawing.Point(167, 253)
+        Me.cmdCopy.Location = New System.Drawing.Point(163, 304)
         Me.cmdCopy.Name = "cmdCopy"
         Me.cmdCopy.Size = New System.Drawing.Size(75, 23)
         Me.cmdCopy.TabIndex = 10
@@ -384,8 +385,9 @@ Partial Class frmCoreInput
         '
         'cmdPaste
         '
+        Me.cmdPaste.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.cmdPaste.Enabled = False
-        Me.cmdPaste.Location = New System.Drawing.Point(248, 253)
+        Me.cmdPaste.Location = New System.Drawing.Point(244, 304)
         Me.cmdPaste.Name = "cmdPaste"
         Me.cmdPaste.Size = New System.Drawing.Size(75, 23)
         Me.cmdPaste.TabIndex = 11
@@ -395,6 +397,8 @@ Partial Class frmCoreInput
         'dgvAxialNodeHeights
         '
         Me.dgvAxialNodeHeights.AllowUserToAddRows = False
+        Me.dgvAxialNodeHeights.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.dgvAxialNodeHeights.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvAxialNodeHeights.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvAxialNodeHeights.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.lblNode, Me.txtHeight})
@@ -409,7 +413,7 @@ Partial Class frmCoreInput
         Me.dgvAxialNodeHeights.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.dgvAxialNodeHeights.Location = New System.Drawing.Point(18, 16)
         Me.dgvAxialNodeHeights.Name = "dgvAxialNodeHeights"
-        Me.dgvAxialNodeHeights.Size = New System.Drawing.Size(541, 202)
+        Me.dgvAxialNodeHeights.Size = New System.Drawing.Size(541, 282)
         Me.dgvAxialNodeHeights.TabIndex = 0
         '
         'lblNode
@@ -454,6 +458,7 @@ Partial Class frmCoreInput
         '
         Me.cboModelsforFailure.DisplayMember = "Text"
         Me.cboModelsforFailure.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboModelsforFailure.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboModelsforFailure.FormattingEnabled = True
         Me.cboModelsforFailure.ItemHeight = 14
         Me.cboModelsforFailure.Items.AddRange(New Object() {Me.ComboItem17, Me.ComboItem18})
@@ -465,7 +470,7 @@ Partial Class frmCoreInput
         '
         'ComboItem17
         '
-        Me.ComboItem17.Text = "cladding oxide shell to only fail where double-sided oxidation and where relocate" & _
+        Me.ComboItem17.Text = "cladding oxide shell to only fail where double-sided oxidation and where relocate" &
     "d material has not solidified"
         Me.ComboItem17.Value = "0"
         '
@@ -486,7 +491,6 @@ Partial Class frmCoreInput
         Me.txtHoopStrainThreshold.Location = New System.Drawing.Point(267, 94)
         Me.txtHoopStrainThreshold.Name = "txtHoopStrainThreshold"
         Me.txtHoopStrainThreshold.ShowUpDown = True
-        Me.txtHoopStrainThreshold.Size = New System.Drawing.Size(80, 20)
         Me.txtHoopStrainThreshold.TabIndex = 1
         '
         'txtFractionofOxidation
@@ -501,7 +505,6 @@ Partial Class frmCoreInput
         Me.txtFractionofOxidation.Location = New System.Drawing.Point(267, 55)
         Me.txtFractionofOxidation.Name = "txtFractionofOxidation"
         Me.txtFractionofOxidation.ShowUpDown = True
-        Me.txtFractionofOxidation.Size = New System.Drawing.Size(80, 20)
         Me.txtFractionofOxidation.TabIndex = 1
         '
         'txtTemperatureforFailure
@@ -516,7 +519,6 @@ Partial Class frmCoreInput
         Me.txtTemperatureforFailure.Location = New System.Drawing.Point(267, 13)
         Me.txtTemperatureforFailure.Name = "txtTemperatureforFailure"
         Me.txtTemperatureforFailure.ShowUpDown = True
-        Me.txtTemperatureforFailure.Size = New System.Drawing.Size(80, 20)
         Me.txtTemperatureforFailure.TabIndex = 1
         '
         'Label8
@@ -583,7 +585,6 @@ Partial Class frmCoreInput
         Me.txtVelocityofDrops.Location = New System.Drawing.Point(11, 146)
         Me.txtVelocityofDrops.Name = "txtVelocityofDrops"
         Me.txtVelocityofDrops.ShowUpDown = True
-        Me.txtVelocityofDrops.Size = New System.Drawing.Size(80, 20)
         Me.txtVelocityofDrops.TabIndex = 1
         Me.txtVelocityofDrops.Value = 0.5R
         '
@@ -599,7 +600,6 @@ Partial Class frmCoreInput
         Me.txtSurfaceTemperature.Location = New System.Drawing.Point(11, 85)
         Me.txtSurfaceTemperature.Name = "txtSurfaceTemperature"
         Me.txtSurfaceTemperature.ShowUpDown = True
-        Me.txtSurfaceTemperature.Size = New System.Drawing.Size(80, 20)
         Me.txtSurfaceTemperature.TabIndex = 1
         Me.txtSurfaceTemperature.Value = 1750.0R
         '
@@ -615,7 +615,6 @@ Partial Class frmCoreInput
         Me.txtFractionofSurfaceArea.Location = New System.Drawing.Point(11, 31)
         Me.txtFractionofSurfaceArea.Name = "txtFractionofSurfaceArea"
         Me.txtFractionofSurfaceArea.ShowUpDown = True
-        Me.txtFractionofSurfaceArea.Size = New System.Drawing.Size(80, 20)
         Me.txtFractionofSurfaceArea.TabIndex = 1
         Me.txtFractionofSurfaceArea.Value = 0.2R
         '
@@ -635,7 +634,7 @@ Partial Class frmCoreInput
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(380, 13)
         Me.Label10.TabIndex = 0
-        Me.Label10.Text = "Surface temperature for freezing of drops of liquefied/slumping fuel rod cladding" & _
+        Me.Label10.Text = "Surface temperature for freezing of drops of liquefied/slumping fuel rod cladding" &
     ""
         '
         'Label9
@@ -645,7 +644,7 @@ Partial Class frmCoreInput
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(443, 13)
         Me.Label9.TabIndex = 0
-        Me.Label9.Text = "Fraction of surface area covered with drops that results in blockage that stops l" & _
+        Me.Label9.Text = "Fraction of surface area covered with drops that results in blockage that stops l" &
     "ocal oxidation"
         '
         'TabPage3
@@ -685,8 +684,8 @@ Partial Class frmCoreInput
         Me.LabelX1.Name = "LabelX1"
         Me.LabelX1.Size = New System.Drawing.Size(561, 53)
         Me.LabelX1.TabIndex = 2
-        Me.LabelX1.Text = "Multiplication factor on fuel pellet diameter that defines minimum thickness that" & _
-    " crust at bottom of molten pool must have in order to support and seal the molte" & _
+        Me.LabelX1.Text = "Multiplication factor on fuel pellet diameter that defines minimum thickness that" &
+    " crust at bottom of molten pool must have in order to support and seal the molte" &
     "n pool"
         Me.LabelX1.WordWrap = True
         '
@@ -702,7 +701,6 @@ Partial Class frmCoreInput
         Me.txtMinimumFractionalFlowArea.Location = New System.Drawing.Point(8, 161)
         Me.txtMinimumFractionalFlowArea.Name = "txtMinimumFractionalFlowArea"
         Me.txtMinimumFractionalFlowArea.ShowUpDown = True
-        Me.txtMinimumFractionalFlowArea.Size = New System.Drawing.Size(80, 20)
         Me.txtMinimumFractionalFlowArea.TabIndex = 1
         '
         'txtMultiplicationFactor
@@ -717,7 +715,6 @@ Partial Class frmCoreInput
         Me.txtMultiplicationFactor.Location = New System.Drawing.Point(8, 65)
         Me.txtMultiplicationFactor.Name = "txtMultiplicationFactor"
         Me.txtMultiplicationFactor.ShowUpDown = True
-        Me.txtMultiplicationFactor.Size = New System.Drawing.Size(80, 20)
         Me.txtMultiplicationFactor.TabIndex = 1
         Me.txtMultiplicationFactor.Value = 1.0R
         '
@@ -739,6 +736,7 @@ Partial Class frmCoreInput
         '
         Me.cboFuelRodDisintegration.DisplayMember = "Text"
         Me.cboFuelRodDisintegration.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboFuelRodDisintegration.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboFuelRodDisintegration.FormattingEnabled = True
         Me.cboFuelRodDisintegration.ItemHeight = 14
         Me.cboFuelRodDisintegration.Items.AddRange(New Object() {Me.ComboItem19, Me.ComboItem20})
@@ -750,13 +748,13 @@ Partial Class frmCoreInput
         '
         'ComboItem19
         '
-        Me.ComboItem19.Text = "Criteria does not use maximum fuel temperature at the axial node in period from s" & _
+        Me.ComboItem19.Text = "Criteria does not use maximum fuel temperature at the axial node in period from s" &
     "tart of accident to present time"
         Me.ComboItem19.Value = "1"
         '
         'ComboItem20
         '
-        Me.ComboItem20.Text = "Criteria does use maximum fuel temperature at the axial node in period from start" & _
+        Me.ComboItem20.Text = "Criteria does use maximum fuel temperature at the axial node in period from start" &
     " of accident to present time"
         Me.ComboItem20.Value = "2"
         '
@@ -772,7 +770,6 @@ Partial Class frmCoreInput
         Me.txtTemperatureaboveSaturation.Location = New System.Drawing.Point(23, 115)
         Me.txtTemperatureaboveSaturation.Name = "txtTemperatureaboveSaturation"
         Me.txtTemperatureaboveSaturation.ShowUpDown = True
-        Me.txtTemperatureaboveSaturation.Size = New System.Drawing.Size(80, 20)
         Me.txtTemperatureaboveSaturation.TabIndex = 1
         Me.txtTemperatureaboveSaturation.Value = 100.0R
         '
@@ -822,7 +819,7 @@ Partial Class frmCoreInput
         Me.LabelX5.Name = "LabelX5"
         Me.LabelX5.Size = New System.Drawing.Size(477, 35)
         Me.LabelX5.TabIndex = 1
-        Me.LabelX5.Text = "Gamma heat fraction. The fraction of power used to directly heat the coolant by g" & _
+        Me.LabelX5.Text = "Gamma heat fraction. The fraction of power used to directly heat the coolant by g" &
     "amma heating."
         '
         'txtGammaHeatingFraction
@@ -837,10 +834,9 @@ Partial Class frmCoreInput
         Me.txtGammaHeatingFraction.Increment = 1.0R
         Me.txtGammaHeatingFraction.Location = New System.Drawing.Point(30, 47)
         Me.txtGammaHeatingFraction.MaxValue = 0.057R
-        Me.txtGammaHeatingFraction.MinValue = 0.0R
+        Me.txtGammaHeatingFraction.MinValue = 0R
         Me.txtGammaHeatingFraction.Name = "txtGammaHeatingFraction"
         Me.txtGammaHeatingFraction.ShowUpDown = True
-        Me.txtGammaHeatingFraction.Size = New System.Drawing.Size(80, 20)
         Me.txtGammaHeatingFraction.TabIndex = 0
         Me.txtGammaHeatingFraction.Value = 0.057R
         '
@@ -866,6 +862,7 @@ Partial Class frmCoreInput
         '
         Me.cboPressureDropFlag.DisplayMember = "Text"
         Me.cboPressureDropFlag.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboPressureDropFlag.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboPressureDropFlag.FormattingEnabled = True
         Me.cboPressureDropFlag.ItemHeight = 14
         Me.cboPressureDropFlag.Items.AddRange(New Object() {Me.ComboItem21, Me.ComboItem22})
@@ -895,10 +892,9 @@ Partial Class frmCoreInput
         Me.txtLimitsStrain.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.txtLimitsStrain.Increment = 1.0R
         Me.txtLimitsStrain.Location = New System.Drawing.Point(6, 185)
-        Me.txtLimitsStrain.MinValue = 0.0R
+        Me.txtLimitsStrain.MinValue = 0R
         Me.txtLimitsStrain.Name = "txtLimitsStrain"
         Me.txtLimitsStrain.ShowUpDown = True
-        Me.txtLimitsStrain.Size = New System.Drawing.Size(80, 20)
         Me.txtLimitsStrain.TabIndex = 1
         Me.txtLimitsStrain.Value = 0.33R
         '
@@ -912,10 +908,9 @@ Partial Class frmCoreInput
         Me.txtTransitionStrain.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.txtTransitionStrain.Increment = 1.0R
         Me.txtTransitionStrain.Location = New System.Drawing.Point(7, 114)
-        Me.txtTransitionStrain.MinValue = 0.0R
+        Me.txtTransitionStrain.MinValue = 0R
         Me.txtTransitionStrain.Name = "txtTransitionStrain"
         Me.txtTransitionStrain.ShowUpDown = True
-        Me.txtTransitionStrain.Size = New System.Drawing.Size(80, 20)
         Me.txtTransitionStrain.TabIndex = 1
         Me.txtTransitionStrain.Value = 0.2R
         '
@@ -929,10 +924,9 @@ Partial Class frmCoreInput
         Me.txtRuptureStrain.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.txtRuptureStrain.Increment = 1.0R
         Me.txtRuptureStrain.Location = New System.Drawing.Point(9, 42)
-        Me.txtRuptureStrain.MinValue = 0.0R
+        Me.txtRuptureStrain.MinValue = 0R
         Me.txtRuptureStrain.Name = "txtRuptureStrain"
         Me.txtRuptureStrain.ShowUpDown = True
-        Me.txtRuptureStrain.Size = New System.Drawing.Size(80, 20)
         Me.txtRuptureStrain.TabIndex = 1
         Me.txtRuptureStrain.Value = 0.18R
         '
@@ -970,7 +964,7 @@ Partial Class frmCoreInput
         Me.LabelX7.Name = "LabelX7"
         Me.LabelX7.Size = New System.Drawing.Size(465, 45)
         Me.LabelX7.TabIndex = 0
-        Me.LabelX7.Text = "Transition strain. Strain for transition from sausage type deformation to localiz" & _
+        Me.LabelX7.Text = "Transition strain. Strain for transition from sausage type deformation to localiz" &
     "ed deformation"
         '
         'LabelX6
@@ -1033,7 +1027,7 @@ Partial Class frmCoreInput
         Me.LabelX11.Name = "LabelX11"
         Me.LabelX11.Size = New System.Drawing.Size(409, 55)
         Me.LabelX11.TabIndex = 0
-        Me.LabelX11.Text = "If the ‘kinetics’ option is specified, then the component power is calculated by " & _
+        Me.LabelX11.Text = "If the ‘kinetics’ option is specified, then the component power is calculated by " &
     "the RELAP5 kinetics model."
         Me.LabelX11.WordWrap = True
         '
@@ -1078,8 +1072,9 @@ Partial Class frmCoreInput
         '
         'cmdCopytoAll2
         '
+        Me.cmdCopytoAll2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.cmdCopytoAll2.Enabled = False
-        Me.cmdCopytoAll2.Location = New System.Drawing.Point(421, 225)
+        Me.cmdCopytoAll2.Location = New System.Drawing.Point(418, 304)
         Me.cmdCopytoAll2.Name = "cmdCopytoAll2"
         Me.cmdCopytoAll2.Size = New System.Drawing.Size(75, 23)
         Me.cmdCopytoAll2.TabIndex = 15
@@ -1088,8 +1083,9 @@ Partial Class frmCoreInput
         '
         'cmdCopy2
         '
+        Me.cmdCopy2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.cmdCopy2.Enabled = False
-        Me.cmdCopy2.Location = New System.Drawing.Point(245, 225)
+        Me.cmdCopy2.Location = New System.Drawing.Point(242, 304)
         Me.cmdCopy2.Name = "cmdCopy2"
         Me.cmdCopy2.Size = New System.Drawing.Size(75, 23)
         Me.cmdCopy2.TabIndex = 13
@@ -1098,8 +1094,9 @@ Partial Class frmCoreInput
         '
         'cmdPaste2
         '
+        Me.cmdPaste2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.cmdPaste2.Enabled = False
-        Me.cmdPaste2.Location = New System.Drawing.Point(326, 225)
+        Me.cmdPaste2.Location = New System.Drawing.Point(323, 304)
         Me.cmdPaste2.Name = "cmdPaste2"
         Me.cmdPaste2.Size = New System.Drawing.Size(75, 23)
         Me.cmdPaste2.TabIndex = 14
@@ -1108,7 +1105,8 @@ Partial Class frmCoreInput
         '
         'dgvGridSpacer
         '
-        Me.dgvGridSpacer.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.dgvGridSpacer.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvGridSpacer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvGridSpacer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -1124,7 +1122,7 @@ Partial Class frmCoreInput
         Me.dgvGridSpacer.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.dgvGridSpacer.Location = New System.Drawing.Point(18, 40)
         Me.dgvGridSpacer.Name = "dgvGridSpacer"
-        Me.dgvGridSpacer.Size = New System.Drawing.Size(776, 150)
+        Me.dgvGridSpacer.Size = New System.Drawing.Size(776, 258)
         Me.dgvGridSpacer.TabIndex = 3
         '
         'lblGridSpacerNumber
@@ -1256,11 +1254,11 @@ Partial Class frmCoreInput
         '
         Me.cboComponentatTopCenter.DisplayMember = "Text"
         Me.cboComponentatTopCenter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboComponentatTopCenter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboComponentatTopCenter.FormattingEnabled = True
         Me.cboComponentatTopCenter.ItemHeight = 14
         Me.cboComponentatTopCenter.Location = New System.Drawing.Point(584, 176)
         Me.cboComponentatTopCenter.Name = "cboComponentatTopCenter"
-        Me.cboComponentatTopCenter.Size = New System.Drawing.Size(121, 20)
         Me.cboComponentatTopCenter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.cboComponentatTopCenter.TabIndex = 3
         '
@@ -1268,11 +1266,11 @@ Partial Class frmCoreInput
         '
         Me.cboComponenttoReceiveSlumped.DisplayMember = "Text"
         Me.cboComponenttoReceiveSlumped.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboComponenttoReceiveSlumped.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboComponenttoReceiveSlumped.FormattingEnabled = True
         Me.cboComponenttoReceiveSlumped.ItemHeight = 14
         Me.cboComponenttoReceiveSlumped.Location = New System.Drawing.Point(584, 150)
         Me.cboComponenttoReceiveSlumped.Name = "cboComponenttoReceiveSlumped"
-        Me.cboComponenttoReceiveSlumped.Size = New System.Drawing.Size(121, 20)
         Me.cboComponenttoReceiveSlumped.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.cboComponenttoReceiveSlumped.TabIndex = 3
         '
@@ -1298,7 +1296,7 @@ Partial Class frmCoreInput
         Me.LabelX17.Name = "LabelX17"
         Me.LabelX17.Size = New System.Drawing.Size(538, 16)
         Me.LabelX17.TabIndex = 2
-        Me.LabelX17.Text = "RELAP5 volume at top center of core. The bottom of this volume should be contiguo" & _
+        Me.LabelX17.Text = "RELAP5 volume at top center of core. The bottom of this volume should be contiguo" &
     "us with the top of the core. "
         '
         'LabelX16
@@ -1317,6 +1315,7 @@ Partial Class frmCoreInput
         '
         Me.cboCoreSlumpingModel.DisplayMember = "Text"
         Me.cboCoreSlumpingModel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboCoreSlumpingModel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboCoreSlumpingModel.FormattingEnabled = True
         Me.cboCoreSlumpingModel.ItemHeight = 14
         Me.cboCoreSlumpingModel.Items.AddRange(New Object() {Me.ComboItem23, Me.ComboItem24})
@@ -1363,6 +1362,8 @@ Partial Class frmCoreInput
         '
         'dgvCoreBypassVolumes
         '
+        Me.dgvCoreBypassVolumes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.dgvCoreBypassVolumes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvCoreBypassVolumes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCoreBypassVolumes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cboComponent, Me.txtVolume, Me.txtElevation})
@@ -1377,7 +1378,7 @@ Partial Class frmCoreInput
         Me.dgvCoreBypassVolumes.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.dgvCoreBypassVolumes.Location = New System.Drawing.Point(42, 66)
         Me.dgvCoreBypassVolumes.Name = "dgvCoreBypassVolumes"
-        Me.dgvCoreBypassVolumes.Size = New System.Drawing.Size(390, 150)
+        Me.dgvCoreBypassVolumes.Size = New System.Drawing.Size(390, 261)
         Me.dgvCoreBypassVolumes.TabIndex = 1
         '
         'cboComponent
@@ -1424,7 +1425,7 @@ Partial Class frmCoreInput
         Me.LabelX15.Name = "LabelX15"
         Me.LabelX15.Size = New System.Drawing.Size(426, 54)
         Me.LabelX15.TabIndex = 0
-        Me.LabelX15.Text = "These cards are used to specify the core bypass hydrodynamic volumes, which are u" & _
+        Me.LabelX15.Text = "These cards are used to specify the core bypass hydrodynamic volumes, which are u" &
     "sed by model for radial spreading of core melt."
         Me.LabelX15.WordWrap = True
         '

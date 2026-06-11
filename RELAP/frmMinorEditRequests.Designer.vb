@@ -32,13 +32,17 @@ Partial Class frmMinorEditRequests
         '
         'DataGridView1
         '
+        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cboVariableCode, Me.cboParameter, Me.txtParameter, Me.txtVolume})
         Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(580, 150)
         Me.DataGridView1.TabIndex = 0
+        AddHandler Me.DataGridView1.CellContentClick, AddressOf Me.DataGridView1_CellContentClick
         '
         'cboVariableCode
         '
@@ -77,7 +81,7 @@ Partial Class frmMinorEditRequests
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(648, 197)
+        Me.ClientSize = New System.Drawing.Size(648, 172)
         Me.CloseButton = False
         Me.CloseButtonVisible = False
         Me.Controls.Add(Me.DataGridView1)

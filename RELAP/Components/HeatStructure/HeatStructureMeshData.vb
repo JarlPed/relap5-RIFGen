@@ -701,14 +701,24 @@ End Class
         End Set
     End Property
 
+    Private _MatDesc As String
+    Public Property MatDesc() As String
+        Get
+            Return _MatDesc
+        End Get
+        Set(ByVal value As String)
+            _MatDesc = value
+        End Set
+    End Property
 
 
-    Public Sub New(ByVal CompositionMat As String, ByVal MaterialNumber As Double, ByVal RegionIncluded As Boolean, ByVal gapmodel As Boolean, ByVal HSnum As Double)
+    Public Sub New(ByVal CompositionMat As String, ByVal MaterialNumber As Double, ByVal RegionIncluded As Boolean, ByVal gapmodel As Boolean, ByVal HSnum As Double, ByVal MatDesc As String)
         Me._CompositionMat = CompositionMat
         Me._MaterialNumber = MaterialNumber
         Me._RegionIncluded = RegionIncluded
         Me._gapmodel = gapmodel
         Me._HSnum = HSnum
+        Me._MatDesc = MatDesc
     End Sub
 
 End Class

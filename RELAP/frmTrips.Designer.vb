@@ -23,6 +23,7 @@ Partial Class frmTrips
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.lblSerial = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cboVariableCode1 = New System.Windows.Forms.DataGridViewComboBoxColumn()
@@ -43,20 +44,44 @@ Partial Class frmTrips
         Me.cboTrip2 = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.chkLatch2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.txtTimeofQuantity2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.Panel2.SuspendLayout()
+        Me.SplitContainer1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'SplitContainer1
+        '
+        Me.SplitContainer1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.SplitContainer1.Location = New System.Drawing.Point(-2, 0)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer1.Panel1
+        '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.DataGridView1)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.DataGridViewX1)
+        Me.SplitContainer1.Size = New System.Drawing.Size(894, 309)
+        Me.SplitContainer1.SplitterDistance = 154
+        Me.SplitContainer1.TabIndex = 2
+        '
         'DataGridView1
         '
+        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.lblSerial, Me.cboVariableCode1, Me.cboParameter1, Me.txtVolume1, Me.cboRelationship, Me.cboVariableCode2, Me.cboParameter2, Me.txtVolume2, Me.txtAdditiveConstant, Me.chkLatch, Me.txtTimeof, Me.txtParamter1, Me.txtParameter2})
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Top
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(892, 116)
-        Me.DataGridView1.TabIndex = 0
+        Me.DataGridView1.Size = New System.Drawing.Size(894, 151)
+        Me.DataGridView1.TabIndex = 1
         '
         'lblSerial
         '
@@ -150,6 +175,8 @@ Partial Class frmTrips
         '
         'DataGridViewX1
         '
+        Me.DataGridViewX1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.DataGridViewX1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewX1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cboTrip1, Me.cboOperator, Me.cboTrip2, Me.chkLatch2, Me.txtTimeofQuantity2})
@@ -161,12 +188,11 @@ Partial Class frmTrips
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewX1.DefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewX1.Dock = System.Windows.Forms.DockStyle.Top
         Me.DataGridViewX1.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.DataGridViewX1.Location = New System.Drawing.Point(0, 116)
+        Me.DataGridViewX1.Location = New System.Drawing.Point(0, 3)
         Me.DataGridViewX1.Name = "DataGridViewX1"
-        Me.DataGridViewX1.Size = New System.Drawing.Size(892, 110)
-        Me.DataGridViewX1.TabIndex = 1
+        Me.DataGridViewX1.Size = New System.Drawing.Size(894, 145)
+        Me.DataGridViewX1.TabIndex = 2
         '
         'cboTrip1
         '
@@ -198,37 +224,41 @@ Partial Class frmTrips
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(892, 229)
+        Me.ClientSize = New System.Drawing.Size(892, 308)
         Me.CloseButton = False
         Me.CloseButtonVisible = False
-        Me.Controls.Add(Me.DataGridViewX1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.SplitContainer1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "frmTrips"
         Me.Text = "Trips"
+        Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewX1 As DevComponents.DotNetBar.Controls.DataGridViewX
-    Friend WithEvents lblSerial As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cboVariableCode1 As System.Windows.Forms.DataGridViewComboBoxColumn
-    Friend WithEvents cboParameter1 As System.Windows.Forms.DataGridViewComboBoxColumn
+    Friend WithEvents SplitContainer1 As SplitContainer
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents lblSerial As DataGridViewTextBoxColumn
+    Friend WithEvents cboVariableCode1 As DataGridViewComboBoxColumn
+    Friend WithEvents cboParameter1 As DataGridViewComboBoxColumn
     Friend WithEvents txtVolume1 As DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn
-    Friend WithEvents cboRelationship As System.Windows.Forms.DataGridViewComboBoxColumn
-    Friend WithEvents cboVariableCode2 As System.Windows.Forms.DataGridViewComboBoxColumn
-    Friend WithEvents cboParameter2 As System.Windows.Forms.DataGridViewComboBoxColumn
+    Friend WithEvents cboRelationship As DataGridViewComboBoxColumn
+    Friend WithEvents cboVariableCode2 As DataGridViewComboBoxColumn
+    Friend WithEvents cboParameter2 As DataGridViewComboBoxColumn
     Friend WithEvents txtVolume2 As DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn
-    Friend WithEvents txtAdditiveConstant As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents chkLatch As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents txtTimeof As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents txtParamter1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents txtParameter2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cboTrip1 As System.Windows.Forms.DataGridViewComboBoxColumn
-    Friend WithEvents cboOperator As System.Windows.Forms.DataGridViewComboBoxColumn
-    Friend WithEvents cboTrip2 As System.Windows.Forms.DataGridViewComboBoxColumn
-    Friend WithEvents chkLatch2 As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents txtTimeofQuantity2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents txtAdditiveConstant As DataGridViewTextBoxColumn
+    Friend WithEvents chkLatch As DataGridViewCheckBoxColumn
+    Friend WithEvents txtTimeof As DataGridViewTextBoxColumn
+    Friend WithEvents txtParamter1 As DataGridViewTextBoxColumn
+    Friend WithEvents txtParameter2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewX1 As DevComponents.DotNetBar.Controls.DataGridViewX
+    Friend WithEvents cboTrip1 As DataGridViewComboBoxColumn
+    Friend WithEvents cboOperator As DataGridViewComboBoxColumn
+    Friend WithEvents cboTrip2 As DataGridViewComboBoxColumn
+    Friend WithEvents chkLatch2 As DataGridViewCheckBoxColumn
+    Friend WithEvents txtTimeofQuantity2 As DataGridViewTextBoxColumn
 End Class

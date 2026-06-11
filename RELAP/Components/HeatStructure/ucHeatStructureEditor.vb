@@ -280,7 +280,9 @@
                 row.Cells(1).Value = myCOTK.HeatStructureMeshData.proHSMat(i).MaterialNumber
                 row.Cells(2).Value = myCOTK.HeatStructureMeshData.proHSMat(i).RegionIncluded
                 row.Cells(3).Value = myCOTK.HeatStructureMeshData.proHSMat(i).gapmodel
-                row.Cells(3).Value = myCOTK.HeatStructureMeshData.proHSMat(i).HSnum
+                row.Cells(4).Value = myCOTK.HeatStructureMeshData.proHSMat(i).HSnum
+                row.Cells(5).Value = myCOTK.HeatStructureMeshData.proHSMat(i).MatDesc
+
             Next
         End If
       
@@ -501,7 +503,7 @@
     Private Sub cmdsave_Click(sender As Object, e As EventArgs) Handles cmdsave.Click
         Dim row As New DataGridViewRow
         Dim cv As New RELAP.SistemasDeUnidades.Conversor
-        Dim v1, v2, v3, v4, v5 As Object
+        Dim v1, v2, v3, v4, v5, v6 As Object
 
         HeatStructureMeshData.InitialGapInternalPressure = txtboxInitialGapInternalPressure.Text
         HeatStructureMeshData.GapConductanceReferenceVolume = txtboxGapConductanceRefVol.Text
@@ -572,7 +574,8 @@
             v3 = row.Cells(2).Value
             v4 = row.Cells(3).Value
             v5 = row.Cells(4).Value
-            Me.HeatStructureMeshData.proHSMat.Add(row.Index + 1, New HSMat(v1, v2, v3, v4, v5))
+            v6 = row.Cells(5).Value
+            Me.HeatStructureMeshData.proHSMat.Add(row.Index + 1, New HSMat(v1, v2, v3, v4, v5, v6))
         Next
 
         If Not Me.HeatStructureMeshData Is Nothing Then

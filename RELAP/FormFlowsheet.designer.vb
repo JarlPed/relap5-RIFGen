@@ -20,6 +20,7 @@ Partial Class FormFlowsheet
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormFlowsheet))
         Dim DockPanelSkin1 As WeifenLuo.WinFormsUI.Docking.DockPanelSkin = New WeifenLuo.WinFormsUI.Docking.DockPanelSkin()
         Dim AutoHideStripSkin1 As WeifenLuo.WinFormsUI.Docking.AutoHideStripSkin = New WeifenLuo.WinFormsUI.Docking.AutoHideStripSkin()
         Dim DockPanelGradient1 As WeifenLuo.WinFormsUI.Docking.DockPanelGradient = New WeifenLuo.WinFormsUI.Docking.DockPanelGradient()
@@ -309,13 +310,13 @@ Partial Class FormFlowsheet
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lbl1, Me.cboProblemType, Me.lbl2, Me.cboProblemOption, Me.lbll, Me.cboInputCheck, Me.ToolStripLabel3, Me.ToolStripComboBoxUnitSystem, Me.lbl3, Me.cboOutputUnits})
         Me.ToolStrip1.Location = New System.Drawing.Point(3, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1035, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1034, 25)
         Me.ToolStrip1.TabIndex = 9
         '
         'lbl1
         '
         Me.lbl1.Name = "lbl1"
-        Me.lbl1.Size = New System.Drawing.Size(81, 22)
+        Me.lbl1.Size = New System.Drawing.Size(80, 22)
         Me.lbl1.Text = "Problem Type"
         '
         'cboProblemType
@@ -359,6 +360,7 @@ Partial Class FormFlowsheet
         Me.ToolStripComboBoxUnitSystem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ToolStripComboBoxUnitSystem.Name = "ToolStripComboBoxUnitSystem"
         Me.ToolStripComboBoxUnitSystem.Size = New System.Drawing.Size(121, 25)
+        Me.ToolStripComboBoxUnitSystem.ToolTipText = resources.GetString("ToolStripComboBoxUnitSystem.ToolTipText")
         '
         'lbl3
         '
@@ -371,6 +373,8 @@ Partial Class FormFlowsheet
         Me.cboOutputUnits.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboOutputUnits.Name = "cboOutputUnits"
         Me.cboOutputUnits.Size = New System.Drawing.Size(121, 25)
+        Me.cboOutputUnits.ToolTipText = "See tooltip for System of Units for input. However, only results from simulations" &
+    " are applied."
         '
         'MenuStrip1
         '
@@ -402,7 +406,7 @@ Partial Class FormFlowsheet
         Me.ComponentesToolStripMenuItem.Name = "ComponentesToolStripMenuItem"
         Me.ComponentesToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.ComponentesToolStripMenuItem.Size = New System.Drawing.Size(248, 22)
+        Me.ComponentesToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.StatusBarTextProvider1.SetStatusBarText(Me.ComponentesToolStripMenuItem, "Opens the configuration window for the active simulation")
         Me.ComponentesToolStripMenuItem.Text = "Simulation Settings"
         '

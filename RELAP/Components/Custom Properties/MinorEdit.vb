@@ -58,10 +58,20 @@ End Class
             _cboParameter = value
         End Set
     End Property
+    Private _cboVolumeNo As Integer
+    Public Property cboVolumeNo() As Integer
+        Get
+            Return _cboVolumeNo
+        End Get
+        Set(ByVal value As Integer)
+            _cboVolumeNo = value
+        End Set
+    End Property
 
 
-    Public Sub New(ByVal cboVariableCode, ByVal cboParameter)
+    Public Sub New(ByVal cboVariableCode, ByVal cboParameter, ByVal cboVolumeNo)
         Me._cboVariableCode = cboVariableCode
         Me._cboParameter = cboParameter
+        Me._cboVolumeNo = cboVolumeNo
     End Sub
 End Class

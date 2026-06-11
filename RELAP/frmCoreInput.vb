@@ -7,12 +7,12 @@
     Private Sub txtAxialNodes_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtAxialNodes.ValueChanged
         If txtAxialNodes.Value > 0 Then
             dgvAxialNodeHeights.Rows.Clear()
+
             For i As Integer = 1 To txtAxialNodes.Text
                 dgvAxialNodeHeights.Rows.Add(i.ToString)
             Next
         End If
     End Sub
-
     Private Sub dgvGridSpacer_RowEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvGridSpacer.RowEnter
         dgvGridSpacer.Rows(e.RowIndex).Cells(0).Value = e.RowIndex + 1
     End Sub
